@@ -11,13 +11,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     let viewModel = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loginConfirmed()
-        passwordTextField.rightView = UIImageView(image: UIImage(named: "eye"))
     }
     
     @IBAction func loginBtnTapped(_ sender: Any) {
@@ -42,6 +42,7 @@ class ViewController: UIViewController {
             self?.present(newController, animated: true)
         }
     }
+
     
 }
 
